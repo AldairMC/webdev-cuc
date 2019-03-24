@@ -6,21 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Form</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
     <section>
-        <form action="" method="POST" class="form-group">
-            <input type="text" name="name" placeholder="Name">
-            <input type="text" name="lastname" placeholder="LastName">
-            <input type="text" name="codigo" placeholder="Código">
-            <input type="tel" name="phone" placeholder="Phone">
-            <input type="tel" name="phone-fijo" placeholder="Phone-Fijo">
-            <input type="text" name="address" placeholder="Address">
-            <input type="text" name="country" placeholder="County">
-            <input type="text" name="department" placeholder="Department">
-            <input type="text" name="city" placeholder="City">
-            <input type="submit" name="submit" value="Submit">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>Form</h3>
+                </div>
+            </div>
+        </div>
+        <form class="form-group">
+            <input type="text" name="name" placeholder="Name" >
+            <input type="text" name="lastname" placeholder="LastName"  >
+            <input type="number" name="code" placeholder="Code" >
+            <input type="number" name="phone" placeholder="Phone" >
+            <input type="number" name="homephone" placeholder="Home Phone" >
+            <input type="text" name="address" placeholder="Address" >
+            <input type="text" name="country" placeholder="County" >
+            <input type="text" name="department" placeholder="Department" >
+            <input type="text" name="city" placeholder="City" >
+            <button id="submit">Submit</button>
         </form>        
     </section>
+
+
+    <script>
+        var x = document.getElementById("submit");
+        var inp = document.getElementsByTagName("input");
+
+        x.addEventListener("click", (event) => {
+            event.preventDefault();
+            for (let i = 0; i < inp.length; i++) {
+                if(inp[i].value == ""){
+                    inp[i].style.borderBottom = "1px solid red";
+               }
+           }
+        });
+    </script>
 </body>
 </html>
