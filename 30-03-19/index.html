@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .datos{
+            max-width: 100%;
+            
+        }
+
+        .tabla{
+            
+        }
+    
+        .datos > div > select{
+            width: 400px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        .btn{
+            display: flex;
+        }
+
+        .btn > button{
+            display: flex;
+            height: 30px;
+            margin-top: 30px;
+            margin-left: 15px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            color: black;
+            background: white; 
+        }
+
+        .resultado{
+            margin-top: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <section class="datos">
+        <div class="pais"> 
+            <h3>Paises</h3>
+            <select name="Paises" id="pais"></select>
+        </div>
+        <div class="departamento">
+            <h3>Departamento</h3>
+            <select name="Paises" id="departamento"></select>
+        </div>
+        <div class="ciudad">
+            <h3>Ciudades</h3>
+            <select name="Paises" id="ciudad"></select>
+        </div>
+        <div class="btn">
+            <button id="generar">Generar</button>
+            <button id="analizar">Analizas</button>
+            <button>Ajax</button>
+            <button>Limpiar</button>
+        </div>
+    </section>
+    <section class="resultado">
+        <h3>Resultado</h3>
+        <textarea name="" id="result" cols="60" rows="10"></textarea>
+    </section>
+    <section class="tabla">
+
+    </section>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
