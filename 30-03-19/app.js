@@ -76,6 +76,43 @@ function appenResulado(mensaje){
     result.value += mensaje;
 }
 
+function printResultado(mensaje){
+    let result = document.getElementById('result');
+    result.value += mensaje;
+}
+
+const cargarAjax = () => {
+  let httpRequest = new XMLHttpRequest();
+  
+  httpRequest.onreadystatechange = () => {
+    if(httpRequest.readyState === XMLHttpRequest.DONE){
+      if(httpRequest.status === 200){
+        let data = httpRequest.responseText;
+          if(data){
+                printResultado(data);
+                let obj = JSON.parse(data);
+                obj.forEach((element, inx) => {
+                  cuerpo_listado.innerHTML += `
+                  <tr><td> ${element.id} 
+                    <td><td> ${element.name} 
+                    <td><td> ${element.username}
+                    <td><td> ${element.email}
+                    <td><td> ${element.address.city}
+                    <td><td> ${element.company.name}
+                  <td><tr>
+                  `
+                });
+             }
+          } else {
+            printResultado(`Algo ha fallado ...respuesta: ${httpRequest.status}`);
+          }
+      }else{
+        printResultado(`Esperando respuesta...`);
+      }
+   }
+  httpRequest.open('GET', 'https://jsonplaceholder.typicode.com/users', true);
+  httpRequest.send();
+}
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -123,3 +160,10 @@ let analizar = document.getElementById('analizar').addEventListener('click', () 
         appenResulado(error.message);
     }
 });
+
+let ajax = document.getElementById('ajax');
+  ajax.addEventListener('click', () => {
+    cargarAjax();
+});
+
+

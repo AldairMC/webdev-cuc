@@ -13,7 +13,7 @@
         }
 
         .tabla{
-            
+            border: 1px solid gray;
         }
     
         .datos > div > select{
@@ -61,7 +61,7 @@
         <div class="btn">
             <button id="generar">Generar</button>
             <button id="analizar">Analizas</button>
-            <button>Ajax</button>
+            <button id="ajax">Ajax</button>
             <button>Limpiar</button>
         </div>
     </section>
@@ -69,8 +69,21 @@
         <h3>Resultado</h3>
         <textarea name="" id="result" cols="60" rows="10"></textarea>
     </section>
-    <section class="tabla">
-
+    <section>
+      <table class="tabla">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>Nombre</th>
+            <th>Logon</th>
+            <th>Email</th>
+            <th>Ciudad</th>
+            <th>Empresa</th>
+          </tr>
+          <tbody id="cuerpo_listado">
+          </tbody>
+        </thead>
+       </table>
     </section>
 
 
