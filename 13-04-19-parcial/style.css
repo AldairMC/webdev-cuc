@@ -1,0 +1,31 @@
+.cabecera{
+  height: 100px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.forumario{
+  padding-left: 0 !important;
+  height: 200px;
+  border: 1px solid gray !important;
+  background-color: gray;
+}
+
+
+.formulario > input{
+  margin-top: 20px;
+}
+
+.preguntas{
+  margin-top: 20px;
+  border: 1px solid gray;
+  padding 15px;
+}
+
+.seleccion{
+  margin-top: 20px;
+}
+
+.tabla{
+  margin-top: 30px;
+}

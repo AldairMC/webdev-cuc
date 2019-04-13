@@ -1,0 +1,139 @@
+<!Doctype HTML >
+<html>
+  <head>
+    <title>Parcial 2 Corte</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+           <div class="col-md-12 cabecera">
+             <h1>Evaluación psicotécnica</h1>
+             <p>Bienvenido, por favor diligencia toda la informción y preguntas que se presentan a continuación</p>
+           </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-12 align-items-center">
+            <div class="form-group formulario">
+                <input type="number" class="form-control" placeholder="*ID" required id="id">
+                <input type="text" class="form-control" placeholder="*Nombre Completo" required id="nombre">
+                <input type="email" class="form-control" placeholder="*Email" required id="email">
+                <input type="date" class="form-control" placeholder="*Fecha de Nacimiento" required id="f_nacimiento">
+                <input type="text" class="form-control" placeholder="*Cargo" required id="cargo">
+                <br>
+                <p>*Campos obligatorios</p>
+            </div>
+          </div>
+        </div> 
+       <div class="row">
+           <div class="col-md-12 aling-items-center preguntas">
+              <div class="seleccion">
+                <p>Pregunta 1: Si tuviera la posibilidad de elegir un curso, de que tipo elegiría:</p>
+                <select class="form-control form-control-lg" id="uno">
+                  <option value="10">Artistico</option> 
+                  <option value="10">Deportivo</option>
+                  <option value="10">Social</option>
+                  <option value="1">Ninguno</option>
+                </select>
+              </div>
+              <div class="seleccion">
+                <p>Pregunta 2: Cercano al cumplimiento de una fecha de entrega que situación lo describe mejor a Ud:</p>
+                <select class="form-control form-control-lg">
+                  <option value="2"> Relajarse y no hacer nada</option>
+                  <option value="8">Trabajar hasta cumplir el objetivo</option>
+                  <option value="5">No puedo trabajar por el stress</option>
+                  <option value="10">Prefiero terminar antes de tiempo</option>
+                </select>
+              </div>
+              <div class="seleccion">
+                <p>Pregunta 3: Con qué frecuencia consume bebidas alcohólicas:</p>
+                <select class="form-control form-control-lg">
+                  <option value="10">1 vez por semana</option>
+                  <option value="8">2 veces por semana</option>
+                  <option value="5">3 veces por semana</option>
+                  <option value="1">más de 3 veces por semana </option>
+                </select>
+              </div>
+              <div class="seleccion">
+                <p>Pregunta 4: Que deporte practica con mayor regularidad:</p>
+                <select class="form-control form-control-lg">
+                  <option value="10">Fútbol</option>
+                  <option value="10">Baloncesto</option>
+                  <option value="8">Otro</option>
+                  <option value="1">No practico ningún deporte</option>
+                </select>
+              </div>
+              <div class="seleccion">
+                <p>Pregunta 5: En un equipo de trabajo con que rol se siente más a gusto:</p>
+                <select class="form-control form-control-lg">
+                  <option value="10">Lider</option>
+                  <option value="8">Ejecutor</option>
+                  <option value="8">Apoyo</option>
+                  <option value="1">No quiero trabajar</option>
+                </select>
+              </div>
+              <div class="seleccion">
+                <p>Pregunta 6: En que tipo de vivienda reside actualmente:</p>
+                <select class="form-control form-control-lg">
+                  <option value="10">Propia</option>
+                  <option value="8">Arrendada</option>
+                  <option value="3">Familiar</option>
+                  <option value="2">Otro</option>
+                </select>
+              </div>
+              <div class="seleccion">
+                <p>Pregunta 7: Cuantas personas habitan en su residencia:p>
+                <select class="form-control form-control-lg">
+                  <option value="10">De 1 a 2</option>
+                  <option value="8">De 2 a 4</option>
+                  <option value="5">De 5 a 7</option>
+                  <option value="1"> >7 </option>
+                </select>
+              </div>
+             <div class="justify-content-center align-items-center">
+             <button class="btn btn-success" id="submit">
+               Submit
+              </button>  
+            </div>
+            </div>
+         </div>
+          <div class="row">
+            <div class="col-md-12 tabla">
+              <table class="table" >
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Date</th>
+                <th scope="col">Cargo</th>
+                <th scope="col">1</th>
+                <th scope="col">2</th>
+                <th scope="col">3</th>
+                <th scope="col">4</th>
+                <th scope="col">5</th>
+                <th scope="col">6</th>
+                <th scope="col">7</th>
+                <th scope="col">Resultado</th>
+              </tr>
+            </thead>
+            <tbody id="tabla">
+              
+            </tbody>
+          </table>
+            </div>
+          </div>
+      
+       <!--       tabla -->
+          
+      </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+  <script src="app.js"></script>
+  </body>
+</html>
