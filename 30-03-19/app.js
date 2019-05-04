@@ -93,13 +93,14 @@ const cargarAjax = () => {
                 let obj = JSON.parse(data);
                 obj.forEach((element, inx) => {
                   cuerpo_listado.innerHTML += `
-                  <tr><td> ${element.id} 
-                    <td><td> ${element.name} 
-                    <td><td> ${element.username}
-                    <td><td> ${element.email}
-                    <td><td> ${element.address.city}
-                    <td><td> ${element.company.name}
-                  <td><tr>
+                  <tr>
+                    <td> ${element.id} </td>
+                    <td> ${element.name} </td>
+                    <td> ${element.username} </td>
+                    <td> ${element.email} </td>
+                    <td> ${element.address.city} </td>
+                    <td> ${element.company.name} </td>
+                  <tr>
                   `
                 });
              }

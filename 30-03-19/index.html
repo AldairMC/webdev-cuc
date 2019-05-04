@@ -7,13 +7,19 @@
     <title>Document</title>
 
     <style>
+        section{
+          margin-top: 20px;
+        }
+      
         .datos{
             max-width: 100%;
             
         }
 
-        .tabla{
+        .tabla > tr, td, th{
             border: 1px solid gray;
+            text-align: center;
+            
         }
     
         .datos > div > select{
@@ -71,19 +77,18 @@
     </section>
     <section>
       <table class="tabla">
-        <thead>
+        <thead> 
           <tr>
-            <th>id</th>
-            <th>Nombre</th>
-            <th>Logon</th>
-            <th>Email</th>
-            <th>Ciudad</th>
-            <th>Empresa</th>
+             <th>id</th>
+             <th>Nombre</th>
+             <th>Logon</th>
+             <th>Email</th>
+             <th>Ciudad</th>
+             <th>Empresa</th>  
           </tr>
-          <tbody id="cuerpo_listado">
-          </tbody>
-        </thead>
-       </table>
+         </thead>
+        <tbody id="cuerpo_listado"></tbody>
+        </table>
     </section>
 
 
