@@ -21,7 +21,7 @@
                 <form action="save_empleado.php" method="POST" onsubmit="return validate()">
                     <div class="form-group">
                         <input type="number" max="9999999999" id="cc" name="cc" class="form-control"
-                        placeholder="Cedula" autofocus required />
+                        placeholder="Cedula" autofocus />
                     </div>
                     <div class="form-group">
                         <input type="text" id="nombre" name="nombre"
@@ -39,27 +39,13 @@
                         required />
                     </div>
                     <div class="form-group">
-                        <input type="number" maxlength="10" id="celular" name="celular"
+                        <input type="number" max="9999999999" id="celular" name="celular"
                         class="form-control" placeholder="Celular"
                          required />
                     </div>
                     <input type="submit" id="empleado_submit" class="btn btn-success btn-block" name="empleado_submit"
                     value="Agregar Empleado" />
                 </form>
-                <input type="text" id="hola" />
-                <button type="button" id="btn" name="button">OK</button>
-                <script type="text/javascript">
-
-                      var btn = document.getElementById('btn');
-                      var cc = document.getElementById('hola').value
-                      btn.addEventListener('click', () => {
-                        if(cc === 12){
-                          alert(`La cedula es: ${cc}`);
-                        }
-
-                      });
-
-                </script>
             </div>
         </div>
         <!-- Tabla Empleados-->

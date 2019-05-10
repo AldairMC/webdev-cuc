@@ -2,6 +2,31 @@
 
 include('db.php');
 
+if($_POST){
+    $cc = $_POST['cc'];
+    $nombre = $_POST['nombre'];
+    $direccion = $_POST['direccion'];
+    $email = $_POST['email'];
+    $celular = $_POST['celular'];
+    if($cc && $nombre && $direccion && $email && $celular){
+      if($cc <= 0){
+        $_SESSION['message'] = "Campo no actualizado: Cedula debe ser mayor que 0";
+        $_SESSION['message-color'] = "danger";
+        header("Location: index.php");
+        return false;
+      }if($celular <= 0){
+        $_SESSION['message'] = "Campo no actualizado: Celular debe ser mayor que 0";
+        $_SESSION['message-color'] = "danger";
+        header("Location: index.php");
+        return false;
+      }
+    }else{
+      echo 'campos invalidos!';
+      header("Location: index.php");
+      return false;
+    }
+  }
+
 if(isset($_GET['id_empleado'])){
     $id = $_GET['id_empleado'];
 
@@ -64,7 +89,7 @@ if(isset($_POST['update'])){
             <div class="card card-body">
                 <form action="edit_empleado.php?id_empleado=<?php echo $_GET['id_empleado']?>" method="POST">
                     <div class="form-group">
-                        <input type="number" maxlength="10" name="cc" placeholder="Update Cedula"
+                        <input type="number" max="9999999999" name="cc" placeholder="Update Cedula"
                         class="form-control" value="<?php echo $cc; ?>">
                     </div>
                     <div class="form-group">
@@ -80,7 +105,7 @@ if(isset($_POST['update'])){
                         class="form-control" value="<?php echo $email; ?>">
                     </div>
                     <div class="form-group">
-                        <input type="number" maxlength="10" name="celular" placeholder="Update Celular"
+                        <input type="number" max="9999999999" name="celular" placeholder="Update Celular"
                         class="form-control" value="<?php echo $celular; ?>">
                     </div>
 
