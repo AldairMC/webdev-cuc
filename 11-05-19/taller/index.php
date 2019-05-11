@@ -21,7 +21,7 @@
                 <form action="save_empleado.php" method="POST" onsubmit="return validate()">
                     <div class="form-group">
                         <input type="number" max="9999999999" id="cc" name="cc" class="form-control"
-                        placeholder="Cedula" autofocus />
+                        placeholder="Cedula" autofocus required/>
                     </div>
                     <div class="form-group">
                         <input type="text" id="nombre" name="nombre"
